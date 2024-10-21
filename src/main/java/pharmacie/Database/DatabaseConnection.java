@@ -11,8 +11,7 @@ public class DatabaseConnection {
     private static final String PASSWORD = "AYAaya123."; // Remplacez par votre mot de passe
     Connection myConn;
 	Statement instruction;
-	
-
+      //DATABASE CONNECTION  
 	public DatabaseConnection() {
 		// TODO Auto-generated method stub
 		
@@ -25,8 +24,8 @@ public class DatabaseConnection {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
+
     public void executeRequeteInsert(String query) {
         int résultat = -1;
 		try {
@@ -50,4 +49,49 @@ public class DatabaseConnection {
                 e.printStackTrace();
             }   }
 
-}
+            // LIRE CONTENU D'UN TABLEAU ! 
+            public void lire(String query) {
+                ResultSet résultat = null;
+                try {
+                    résultat = instruction.executeQuery(query);
+                } catch (SQLException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+                
+                int i = 0;
+                try {
+                    while ( résultat.next()) {
+                        int num = résultat.getInt("id");
+                        String ch = résultat.getString("name");
+                        System.out.println("ligne " + i + " : " + num + " , " + ch + "\n");
+                        i ++;
+                    }
+                } catch (SQLException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+            
+            public void insert(String query) {
+                try {
+                    int résultat = instruction.executeUpdate(query);
+                    if(résultat>0) {
+                System.out.println("Ligne ajoutée avec succées");
+                }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            
+            public void close() {
+                try {
+                    myConn.close();
+                } catch (SQLException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        
+        }
+        

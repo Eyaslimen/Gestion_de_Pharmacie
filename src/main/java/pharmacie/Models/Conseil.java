@@ -1,13 +1,13 @@
 package pharmacie.Models;
 
 public class Conseil {
-    private Integer PharmacienID;
+    private String PharmacienName;
     private String titre;
     private String contenu;
 
     // Getters
-    public Integer getPharmacienID() {
-        return PharmacienID;
+    public String PharmacienName() {
+        return PharmacienName;
     }
 
     public String getTitre() {
@@ -19,8 +19,8 @@ public class Conseil {
     }
 
     // Setters
-    public void setPharmacienID(Integer pharmacienID) {
-        this.PharmacienID = pharmacienID;
+    public void setPharmacienID(String PharmacienName) {
+        this.PharmacienName = PharmacienName;
     }
 
     public void setTitre(String titre) {
