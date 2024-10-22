@@ -6,7 +6,7 @@ import pharmacie.Services.GestionQuestions;
 public class QuestionDao {
     static DatabaseConnection conn =new DatabaseConnection();
     static Scanner sc = new Scanner(System.in);
-    public static void lireQuestions() {
+    public static void ConsulterQuestions() {
         conn.lire("Select * from questions;",true);
         System.out.println("Avez-vous besoin d'autre services ?");
         GestionQuestions GQ = new GestionQuestions();
@@ -16,7 +16,7 @@ public class QuestionDao {
          conn.lire("SELECT * FROM questions WHERE reponse IS NULL;",false);
          System.out.println("quel est l'id de question que vous pouvez repondre ?");
          int id = sc.nextInt();
-         sc.nextLine(); // Consommer le saut de ligne restant
+         sc.nextLine();
          System.out.println("donne moi votre nom");
          String nom = sc.nextLine();
          System.out.println("donne moi votre reponse");

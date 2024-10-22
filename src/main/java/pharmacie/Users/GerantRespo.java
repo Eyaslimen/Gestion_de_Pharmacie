@@ -20,6 +20,9 @@ public class GerantRespo {
              GestionProduits GP = new GestionProduits();
             case 3:
             GestionsUtilisateurs gu = new GestionsUtilisateurs();
+            default:
+            System.out.println("Veuillez choisir une option valide");
+            getReponse();
     } }
     public int reponse() {
         Scanner myObj = new Scanner(System.in);

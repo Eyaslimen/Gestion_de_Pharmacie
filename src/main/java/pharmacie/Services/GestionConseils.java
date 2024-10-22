@@ -43,6 +43,4 @@ public class GestionConseils {
         int x = myObj.nextInt();
         return x;
     }
-
-
 }

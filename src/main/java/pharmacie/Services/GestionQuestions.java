@@ -13,7 +13,7 @@ public class GestionQuestions {
         int y=reponse();
         switch(y) {
             case 1 :
-                QuestionDao.lireQuestions();
+                QuestionDao.ConsulterQuestions();
                 System.out.println("Avez-vous besoin d'autre service?");
                 getReponse();
                 break;

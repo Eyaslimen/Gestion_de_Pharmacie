@@ -8,7 +8,7 @@ public class GestionEmployes {
     }
 
     public void getResponse() {
-        System.out.println("1-Consulter Employés \n 2-Ajouter un employe \n 3-Supprimer un Employe \n 4-Retourner ");
+        System.out.println("1-Consulter Employés \n 2-Ajouter un employe \n 3-Supprimer un Employe \n 4-Changer un Employe \n 5-Retourner ");
         int x = reponse();
         switch (x) {
             case 1:
