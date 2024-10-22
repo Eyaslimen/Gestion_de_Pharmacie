@@ -1,7 +1,6 @@
 package pharmacie.Services;
 import java.util.Scanner;
 import pharmacie.Dao.ConseilDao;
-import pharmacie.Dao.ConseilDao;
 import pharmacie.Database.DatabaseConnection;
 import pharmacie.Users.PharmacienRespo;
 public class GestionConseils {
@@ -13,7 +12,7 @@ public class GestionConseils {
         int x1=reponse();
         switch(x1) {
             case 1:
-             ConseilDao.lireConseils();
+             ConseilDao.ConsulterConseils();
              System.out.println("Avez vous besoin d'autre service ?");
              getReponse();
              break;

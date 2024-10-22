@@ -1,7 +1,7 @@
 package pharmacie.Enums;
 
 public enum Role {
-Gérant,
+Gerant,
 Pharmacien,
 Employe
 }

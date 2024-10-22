@@ -4,6 +4,7 @@ import pharmacie.Services.GestionConseils;
 import pharmacie.Services.GestionEmployes;
 import pharmacie.Services.GestionProduits;
 import pharmacie.Services.GestionQuestions;
+import pharmacie.Services.GestionsUtilisateurs;
 
 public class GerantRespo {
     public GerantRespo() {
@@ -16,7 +17,9 @@ public class GerantRespo {
             case 1:
              GestionEmployes GE = new GestionEmployes();
             case 2:
-            GestionProduits GP = new GestionProduits();
+             GestionProduits GP = new GestionProduits();
+            case 3:
+            GestionsUtilisateurs gu = new GestionsUtilisateurs();
     } }
     public int reponse() {
         Scanner myObj = new Scanner(System.in);
