@@ -3,17 +3,17 @@ package pharmacie.Models;
 import java.sql.Date;
 
 public class Question {
-    private int clientId;
-    private Integer GerantId; 
+    private int clientNom;
+    private Integer GerantNom; 
     private String question;
     private String reponse;
     private Date dateQuestion;
     private Date dateReponse;
 
     // Constructeur
-    public Question(int clientId, Integer GerantId, String question, String reponse, Date dateQuestion, Date dateReponse) {
-        this.clientId = clientId;
-        this.GerantId = GerantId;
+    public Question(int clientNom, Integer GerantNom, String question, String reponse, Date dateQuestion, Date dateReponse) {
+        this.clientNom = clientNom;
+        this.GerantNom = GerantNom;
         this.question = question;
         this.reponse = reponse;
         this.dateQuestion = dateQuestion;
@@ -23,20 +23,20 @@ public class Question {
     // Getters et Setters
     
 
-    public int getClientId() {
-        return clientId;
+    public int getclientNom() {
+        return clientNom;
     }
 
-    public void setClientId(int clientId) {
-        this.clientId = clientId;
+    public void setclientNom(int clientNom) {
+        this.clientNom = clientNom;
     }
 
-    public Integer getGerantId() {
-        return GerantId;
+    public Integer getGerantNom() {
+        return GerantNom;
     }
 
-    public void setGerantId(Integer GerantId) {
-        this.GerantId = GerantId;
+    public void setGerantNom(Integer GerantNom) {
+        this.GerantNom = GerantNom;
     }
 
     public String getQuestion() {

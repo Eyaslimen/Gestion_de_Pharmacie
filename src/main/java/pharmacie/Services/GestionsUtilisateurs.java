@@ -5,6 +5,9 @@ import pharmacie.Users.PharmacienRespo;
 import java.util.*;
 public class GestionsUtilisateurs {
     public GestionsUtilisateurs() {
+        getReponse();   
+    }
+    public void getReponse() {
         Scanner myObj = new Scanner(System.in);
         System.out.println("Bonjour au notre systéme de gestion de Pharmacie , quelle est votre position ? \n 1 - Gerant \n 2 - Pharmacien \n 3 - Employe \n 4 - Client");
         int choix1=myObj.nextInt();
@@ -22,8 +25,8 @@ public class GestionsUtilisateurs {
         System.out.println("vous etes un client");
         break;
         default:
-            System.out.println("vous n'etes pas un gerant, un pharmacien ou un client");
-        
+        System.out.println("Veuillez choisir une option valide");
+        getReponse();
         } 
     }
 }

@@ -24,7 +24,7 @@ public static void ajouterConseil() {
 
 //Lire tt les conseils
 public static void lireConseils() {
-    conn.lire("Conseils");
+    conn.lire("Select * from conseils;",true);
     GestionConseils gc=new GestionConseils();
 }
 

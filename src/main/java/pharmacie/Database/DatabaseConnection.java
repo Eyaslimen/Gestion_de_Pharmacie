@@ -19,10 +19,8 @@ public class DatabaseConnection {
 		}
 	}
     //Lire tt les colonnes d'un table donnée
-   
-    public void lire(String table) {
+    public void lire(String requete,boolean message) {
         ResultSet résultat = null;
-        String requete= "Select * from "+table;
         try {
         résultat = instruction.executeQuery(requete);
         } catch (SQLException e) {
@@ -32,7 +30,7 @@ public class DatabaseConnection {
         ResultSetMetaData metaData = (ResultSetMetaData) résultat.getMetaData();
         int columnCount = metaData.getColumnCount();  
         int i = 0;
-        System.out.println("Voiçi le contenu de votre table : "+table);  
+        if(message) {System.out.println("Voiçi les informations que vous avez cherché :");   }
         System.out.println("___________________________________________");  
         while (résultat.next()) {
             System.out.print("ligne " + i + " : \n");
