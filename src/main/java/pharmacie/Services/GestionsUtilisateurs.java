@@ -1,5 +1,7 @@
 package pharmacie.Services;
 
+import pharmacie.Users.ClientRespo;
+import pharmacie.Users.EmployeRespo;
 import pharmacie.Users.GerantRespo;
 import pharmacie.Users.PharmacienRespo;
 import java.util.*;
@@ -19,10 +21,10 @@ public class GestionsUtilisateurs {
             PharmacienRespo PharmacienResponsabilite= new PharmacienRespo();
             break;
         case 3:
-            System.out.println("vous etes un client");
+            EmployeRespo ER = new EmployeRespo();
             break;
         case 4:
-        System.out.println("vous etes un client");
+            ClientRespo CR = new ClientRespo();
         break;
         default:
         System.out.println("Veuillez choisir une option valide");

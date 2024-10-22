@@ -23,7 +23,7 @@ public class GerantRespo {
             default:
             System.out.println("Veuillez choisir une option valide");
             getReponse();
-    } }
+            } }
     public int reponse() {
         Scanner myObj = new Scanner(System.in);
         int x = myObj.nextInt();
