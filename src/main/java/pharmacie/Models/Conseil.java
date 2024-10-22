@@ -4,9 +4,13 @@ public class Conseil {
     private String PharmacienName;
     private String titre;
     private String contenu;
-
+    public Conseil(String pharmacienName,String titre,String contenu ) {
+        this.PharmacienName=pharmacienName;
+        this.titre=titre;
+        this.contenu=contenu;
+    }
     // Getters
-    public String PharmacienName() {
+    public String getPharmacienName() {
         return PharmacienName;
     }
 

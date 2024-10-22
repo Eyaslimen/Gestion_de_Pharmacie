@@ -3,21 +3,26 @@ import java.util.Scanner;
 import pharmacie.Dao.ConseilDao;
 import pharmacie.Dao.ConseilDao;
 import pharmacie.Database.DatabaseConnection;
+import pharmacie.Users.PharmacienRespo;
 public class GestionConseils {
-    DatabaseConnection conn= new DatabaseConnection();
     public GestionConseils() {
-        System.out.println("1-Voir Conseils \n 2-Supprimer un Conseil \n 3-Modifier un Conseil \n 4-Ajouter un Conseil");
+        System.out.println("1-Voir Conseils \n 2-Supprimer un Conseil \n 3-Modifier un Conseil \n 4-Ajouter un Conseil \n 5-Retourner");
         int x1=reponse();
         switch(x1) {
             case 1:
-             conn.lire("Select * from Conseils;");
+             ConseilDao.lireConseils();
+             break;
             case 2:
-             System.out.println("2");
+             ConseilDao.supprimerConseil();
+             break;
             case 3:
-             System.out.println("3");
+             ConseilDao.changerConseil();
+             break;
              case 4:
-             ConseilDao.addConseil();
-
+             ConseilDao.ajouterConseil();
+             break;
+             case 5:
+             PharmacienRespo pharmacienresp = new PharmacienRespo();
         }
     }
 
