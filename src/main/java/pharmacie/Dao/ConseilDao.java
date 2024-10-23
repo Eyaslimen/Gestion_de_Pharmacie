@@ -18,6 +18,7 @@ public static void ajouterConseil() {
     String query = "INSERT INTO Conseils (PharmacienName, titre, contenu) VALUES ('" 
     + conseil.getPharmacienName() + "', '" + conseil.getTitre() + "', '" + conseil.getContenu() + "')";
     conn.insert(query);
+    System.out.println("Conseil ajoutée avec succées!");
     GestionConseils gc=new GestionConseils();
 
 }
@@ -33,6 +34,7 @@ public static void supprimerConseil() {
     int id = sc.nextInt();
     String requete = "DELETE FROM Conseils WHERE ConseilID = "+id;
     conn.delete(requete);
+    System.out.println("Conseil supprimée avec succées!");
     GestionConseils gc=new GestionConseils();
 }
 public static void changerConseil() {
@@ -47,6 +49,7 @@ public static void changerConseil() {
 				+ " SET "+reponse+"=" + valeur
 				+ " WHERE ConseilID =" + id + ";";
     conn.update(requete);
+    System.out.println("Conseil modifiée avec succées!");
     GestionConseils gc=new GestionConseils();
 }
 }

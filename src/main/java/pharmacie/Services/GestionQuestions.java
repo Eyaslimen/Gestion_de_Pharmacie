@@ -9,22 +9,22 @@ public class GestionQuestions {
 
     }
     public void getReponse() {
-        System.out.println("1-Acceder au questions \n 2-Repondre aux questions sans réponse \n 3-Retourner");
+        System.out.println("\n Merci de choisir une option valide \n 1-Acceder au questions \n 2-Repondre aux questions sans réponse \n 3-Retourner");
         int y=reponse();
         switch(y) {
             case 1 :
                 QuestionDao.ConsulterQuestions();
-                System.out.println("Avez-vous besoin d'autre service?");
+                System.out.println("Avez-vous besoin d'un autre service ?");
                 getReponse();
                 break;
             case 2 :
                 QuestionDao.RepondreQuestions();
-                System.out.println("Avez-vous besoin d'autre service?");
+                System.out.println("Avez-vous besoin d'un autre service ?");
                 getReponse();
                 break;
             case 3 :
                 PharmacienRespo pr = new PharmacienRespo();
-                System.out.println("Avez-vous besoin d'autre service?");
+                System.out.println("Avez-vous besoin d'un autre service ?");
                 getReponse();
             default :
                 System.out.println("Veuillez choisir une option valide");

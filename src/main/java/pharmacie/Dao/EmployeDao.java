@@ -24,12 +24,14 @@ static Scanner sc = new Scanner(System.in);
         + nom + "', '" + prenom + "', '" + motDePasse + "', '" + role + "');";
         // Exécution de la requête
         conn.insert(query);
+        System.out.println("Employé ajouté avec succées");
     }
     public static void SupprimerEmployes() {
         System.out.println("Entrer l'id de l'employe a supprimer");
         int id = sc.nextInt();
         String requete = "DELETE FROM employes WHERE EmployeID = "+id;
         conn.delete(requete);
+        System.out.println("Employé supprimé avec succées");
     }
     public static void ChangerEmploye() {
     System.out.println("Donne moi l'id de l'employe a changer :");
@@ -41,5 +43,6 @@ static Scanner sc = new Scanner(System.in);
     String valeur = sc.nextLine(); 
     String requete = "UPDATE employes SET " + colonne + " = '" + valeur + "' WHERE EmployeID = " + id + ";";
     conn.update(requete);
+    System.out.println("Employé modifié avec succées");
     }
 }

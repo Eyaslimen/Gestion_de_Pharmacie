@@ -7,11 +7,11 @@ public class EmployeRespo {
         getReponse();
     }
     public void getReponse() {
-        System.out.println("1-Gestion des Commandes \n 2-Gestion des produits \n 3-Gestion des factures \n 4-Retourner ");
+        System.out.println("\n Que souhaitez-vous faire ? \n 1-Gestion des Commandes \n 2-Gestion des produits \n 3-Gestion des factures \n 4-Retourner ");
         int y=reponse();
         switch (y) {
             case 1:
-             GestionCommandes GC = new GestionCommandes();
+             GestionCommandes GC = new GestionCommandes(2);
             case 2:
              GestionProduits GP = new GestionProduits();
             case 3:

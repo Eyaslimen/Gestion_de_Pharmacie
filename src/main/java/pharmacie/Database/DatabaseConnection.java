@@ -50,26 +50,40 @@ public class DatabaseConnection {
         e.printStackTrace();
         }
     }
+        // lire valeur a partir d'une requete
+   public Object lireValeur(String requete) {
+    ResultSet resultat = null;
+    Object valeur = null; 
+    try {
+        // Exécuter la requête
+        resultat = instruction.executeQuery(requete);
+
+        // Vérifier si le ResultSet a des résultats
+        if (resultat.next()) {
+            // Récupérer la valeur de la première colonne (1-indexé)
+            valeur = resultat.getObject(1); // ou getString(1), getInt(1), etc. selon le type attendu
+        }
+    } catch (SQLException e) {
+        e.printStackTrace(); // Gérer l'exception
+    } 
+    return valeur; // Retourner la valeur trouvée, ou null si aucune valeur n'a été trouvée
+                                        }
+
+
 
     //inserer une ligne dans un table donnée
     public void insert(String query) {
                 try {
                     int résultat = instruction.executeUpdate(query);
-                    if(résultat>0) {
-                System.out.println("Ligne ajoutée avec succées");
-                }
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
-    }
+                }
             
     // Supprimer une ligne d'un table : 
 public void delete(String requete) {
     try {
         int résultat = instruction.executeUpdate(requete);
-        if(résultat>0) {
-        System.out.println("Ligne supprimée avec succées");
-    }
     } catch (SQLException e) {
         e.printStackTrace();
     }
@@ -78,20 +92,10 @@ public void delete(String requete) {
     public void update(String requete) {
         try {
             int résultat = instruction.executeUpdate(requete);
-            if(résultat>0) {
-            System.out.println("Ligne modifiée avec succées");
-        }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
-
-
-
-
-
-
 
 //Fermer la connexion établi
     public void close() {

@@ -7,9 +7,18 @@ public class ProduitDao {
     static DatabaseConnection conn =new DatabaseConnection();
     static Scanner sc = new Scanner(System.in);
 
-    public static void ConsulterProduits() {
-        conn.lire("Select * from produits;", true);
+    public static void ConsulterProduits(boolean message) {
+        conn.lire("Select * from produits;", message);
         }
+    public static void ConsulterProduits_client(boolean message) {
+            conn.lire("Select ProduitId,nom,prix from produits;", message);
+            }
+    public static float VoirPrix(int id ) {
+        Object x = conn.lireValeur("Select prix from produits where ProduitId = "+id+";");
+        BigDecimal prixDecimal = (BigDecimal) x;
+        // Convertir BigDecimal en float
+        return prixDecimal.floatValue();
+    }
     public static void AjouterProduit() {
             System.out.println("entrer le nom du produit");
             String nom = sc.nextLine();
