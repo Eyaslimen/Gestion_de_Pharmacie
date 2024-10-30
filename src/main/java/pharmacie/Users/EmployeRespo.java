@@ -13,7 +13,7 @@ public class EmployeRespo {
             case 1:
              GestionCommandes GC = new GestionCommandes(2);
             case 2:
-             GestionProduits GP = new GestionProduits();
+             GestionProduits GP = new GestionProduits(2);
             case 3:
              GestionFactures GF = new GestionFactures();
             case 4:

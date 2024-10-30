@@ -14,6 +14,7 @@ static Scanner sc = new Scanner(System.in);
     public static void AjouterEmployes() {
         System.out.println("entrer le nom de l'employe");
         String nom = sc.nextLine();
+        sc.nextLine();
         System.out.println("entrer le prenom de l'employe");
         String prenom = sc.nextLine();
         System.out.println("entrer le mot de passe pour cet employe de l'employe");
@@ -22,7 +23,7 @@ static Scanner sc = new Scanner(System.in);
         String role = sc.nextLine();
         String query = "INSERT INTO employes (nom, prenom, mot_de_passe, role) VALUES ('" 
         + nom + "', '" + prenom + "', '" + motDePasse + "', '" + role + "');";
-        // Exécution de la requête
+ 
         conn.insert(query);
         System.out.println("Employé ajouté avec succées");
     }

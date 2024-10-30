@@ -8,7 +8,7 @@ static DatabaseConnection conn =new DatabaseConnection();
 static Scanner sc = new Scanner(System.in);
 //ajouter un conseil
 public static void ajouterConseil() {
-    System.out.println("Donne moi le titre");
+    System.out.println("Donne moi votre nom");
     String PharmacienName= sc.nextLine();
     System.out.println("Donne moi le titre");
     String titre = sc.nextLine();
@@ -23,9 +23,9 @@ public static void ajouterConseil() {
 
 }
 //Lire tt les conseils
-public static void ConsulterConseils() {
+public static void ConsulterConseils(int i) {
     conn.lire("Select * from conseils;",true);
-    GestionConseils gc=new GestionConseils();
+    if(i==1) {GestionConseils gc=new GestionConseils(); }
 }
 
 // supprimer un conseil
@@ -42,12 +42,12 @@ public static void changerConseil() {
     int id = sc.nextInt();
     System.out.println("Ce que vous voulez changer?");
     String reponse = sc.next();
-    String valeur="hi";
-    if(reponse!=null) {System.out.println("Donne moi le nv valeur?");
-     valeur = sc.next(); }
+    sc.nextLine();
+    System.out.println("Donne moi le nv valeur?");
+    String valeur = sc.next(); 
     String requete = "UPDATE Conseils"
-				+ " SET "+reponse+"=" + valeur
-				+ " WHERE ConseilID =" + id + ";";
+				+ " SET "+reponse+"='" +valeur
+				+ "' WHERE ConseilID =" + id + ";";
     conn.update(requete);
     System.out.println("Conseil modifiée avec succées!");
     GestionConseils gc=new GestionConseils();

@@ -14,7 +14,7 @@ public class PharmacienRespo {
         int y = reponse();
         switch (y) {
             case 1:
-            GestionQuestions gestionquestions = new GestionQuestions();
+            GestionQuestions gestionquestions = new GestionQuestions(2);
                break;
             case 2:
             GestionConseils gestionconseil = new GestionConseils();

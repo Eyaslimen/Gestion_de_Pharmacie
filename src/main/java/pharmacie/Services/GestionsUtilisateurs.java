@@ -7,8 +7,9 @@ import pharmacie.Users.PharmacienRespo;
 import java.util.*;
 public class GestionsUtilisateurs {
     public GestionsUtilisateurs() {
-        getReponse();   
+        getReponse();
     }
+    
     public void getReponse() {
         Scanner myObj = new Scanner(System.in);
         System.out.println(" \n  Bonjour et bienvenue dans notre système de gestion de pharmacie. \n Pourriez-vous s'il vous plaît indiquer votre rôle ? \n 1 - Gerant \n 2 - Pharmacien \n 3 - Employe \n 4 - Client ");

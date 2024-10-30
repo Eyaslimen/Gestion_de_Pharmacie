@@ -17,7 +17,7 @@ public class GerantRespo {
             case 1:
              GestionEmployes GE = new GestionEmployes();
             case 2:
-             GestionProduits GP = new GestionProduits();
+             GestionProduits GP = new GestionProduits(1);
             case 3:
             GestionsUtilisateurs gu = new GestionsUtilisateurs();
             default:

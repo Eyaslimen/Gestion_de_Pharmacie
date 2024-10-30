@@ -1,5 +1,6 @@
 package pharmacie.Dao;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 import pharmacie.Database.DatabaseConnection;
@@ -38,6 +39,15 @@ static Scanner sc = new Scanner(System.in);
      public static void ValiderCommande(int CommandeId) {
         conn.update("UPDATE commandes SET Etat = 'Validée' WHERE CommandeID = "+CommandeId+";");
         System.out.println("Commande validée!");
+        Object total_dec = conn.lireValeur("Select TotalCommande from commandes where CommandeID = "+CommandeId);
+        BigDecimal totalDecimal = (BigDecimal) total_dec;
+        float total = totalDecimal.floatValue();
+        String requete = "INSERT INTO factures (CommandeID, DateFacture, MontantTotal) VALUES (" 
+        + CommandeId + 
+        ",'" + new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date()) + "',"
+        + total + ");";
+        conn.insert(requete);
+        System.out.println("Facture générée avec succès");
      }
 
 }

@@ -81,13 +81,13 @@ public class DatabaseConnection {
                 }
             
     // Supprimer une ligne d'un table : 
-public void delete(String requete) {
+    public void delete(String requete) {
     try {
         int résultat = instruction.executeUpdate(requete);
     } catch (SQLException e) {
         e.printStackTrace();
     }
-}
+    }
     //modifier une ligne du table : 
     public void update(String requete) {
         try {

@@ -37,14 +37,12 @@ public class GestionCommandes {
             getResponse_Employe();
         }
     }
-
     private void ValiderCommande() {
         System.out.println("Veuillez entrer l'ID de la commande à valider :");
         int x = sc.nextInt();
         CommandeDao.ValiderCommande(x);
         AutreCommande();
         }
-
     private void AutreCommande() {
         System.out.println("Pouvez vous valider une autre commande ? \n 1-Oui \n 2-Retourner ");
         int y = sc.nextInt();
@@ -160,6 +158,4 @@ public class GestionCommandes {
         } 
         return total;
     }
-
-
 }

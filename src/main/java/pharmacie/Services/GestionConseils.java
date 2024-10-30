@@ -12,7 +12,7 @@ public class GestionConseils {
         int x1=reponse();
         switch(x1) {
             case 1:
-             ConseilDao.ConsulterConseils();
+             ConseilDao.ConsulterConseils(1);
              System.out.println("Avez-vous besoin d'un autre service ?");
              getReponse();
              break;
