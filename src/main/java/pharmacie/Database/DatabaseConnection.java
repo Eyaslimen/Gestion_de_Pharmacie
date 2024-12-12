@@ -4,9 +4,9 @@ import java.sql.*;
 import com.mysql.cj.jdbc.result.ResultSetMetaData;
 
 public class DatabaseConnection {
-    private static final String URL = "jdbc:mysql://localhost:3305/gestion_de_pharmacie"; // Remplacez par le nom de votre base de données
-    private static final String USER = "root"; // Remplacez par votre nom d'utilisateur
-    private static final String PASSWORD = "AYAaya123."; // Remplacez par votre mot de passe
+    private static final String URL = "jdbc:mysql://localhost:3305/gestion_de_pharmacie";
+    private static final String USER = "root"; 
+    private static final String PASSWORD = "AYAaya123."; 
     Connection myConn;
 	Statement instruction;
       //DATABASE CONNECTION  
