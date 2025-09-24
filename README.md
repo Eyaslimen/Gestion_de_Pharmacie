@@ -73,5 +73,5 @@ java -jar target/gestion_de_pharmacie-1.0-SNAPSHOT.jar
 
 ## Démo
 
-[Voir la vidéo](https://drive.google.com/drive/u/0/folders/1hW_ldaR89UlweREssnVLKeLEnT06eNdr)
+[Voir la vidéo](https://drive.google.com/file/d/10vqDJFZbU3cwFiGbmV9QIvqw2n30bJa0/view?usp=sharing)
 
